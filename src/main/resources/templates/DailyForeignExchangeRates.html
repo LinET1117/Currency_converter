@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>查詢政府資料匯率</title>
+</head>
+<body>
+<h1>匯率資訊</h1>
+<table>
+    <tr>
+        <th>日期&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</th>
+        <th>USD to NTD&ensp;&ensp;&ensp;&ensp;</th>
+        <th>RMB to NTD&ensp;&ensp;&ensp;&ensp;</th>
+        <th>USD to RMB&ensp;&ensp;&ensp;&ensp;</th>
+    </tr>
+    <tr th:each="rate : ${exchangeRates}">
+        <td th:text="${rate.date}"></td>
+        <td th:text="${rate.usdToNtd}"></td>
+        <td th:text="${rate.rmbToNtd}"></td>
+        <td th:text="${rate.usdToRmb}"></td>
+    </tr>
+</table>
+</body>
+</html>

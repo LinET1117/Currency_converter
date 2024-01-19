@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "d1aec76a-642e-408e-b15b-cfad0676f981",
+		"name": "ExchangeRate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32053289"
+	},
+	"item": [
+		{
+			"name": "DailyForeignExchangeRates",
+			"item": [
+				{
+					"name": "DailyForeignExchangeRates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/exchange_rates/DailyForeignExchangeRates",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"exchange_rates",
+								"DailyForeignExchangeRates"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "20250101",
+									"type": "text"
+								},
+								{
+									"key": "usdToNtd",
+									"value": "28.50",
+									"type": "text"
+								},
+								{
+									"key": "rmbToNtd",
+									"value": "4.50",
+									"type": "text"
+								},
+								{
+									"key": "usdToRmb",
+									"value": "6.33",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/exchange_rates/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"exchange_rates",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Read",
+			"item": [
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/exchange_rates",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"exchange_rates"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UPDATE",
+			"item": [
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "20250101",
+									"type": "text"
+								},
+								{
+									"key": "usdToNtd",
+									"value": "29.50",
+									"type": "text"
+								},
+								{
+									"key": "rmbToNtd",
+									"value": "4.50",
+									"type": "text"
+								},
+								{
+									"key": "usdToRmb",
+									"value": "6.33",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/exchange_rates/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"exchange_rates",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DELETE",
+			"item": [
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/exchange_rates/delete?date=20250101",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"exchange_rates",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "20250101"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

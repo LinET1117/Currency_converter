@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>匯率記錄列表</title>
+</head>
+<body>
+<h1>匯率記錄列表</h1>
+<table>
+    <tr>
+        <th>日期&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</th>
+        <th>USD to NTD&ensp;&ensp;&ensp;&ensp;</th>
+        <th>RMB to NTD&ensp;&ensp;&ensp;&ensp;</th>
+        <th>USD to RMB&ensp;&ensp;&ensp;&ensp;</th>
+    </tr>
+    <tr th:each="exchangeRate : ${exchangeRates}">
+        <td th:text="${exchangeRate.date}"></td>
+        <td th:text="${exchangeRate.usdToNtd}"></td>
+        <td th:text="${exchangeRate.rmbToNtd}"></td>
+        <td th:text="${exchangeRate.usdToRmb}"></td>
+    </tr>
+</table>
+</body>
+</html>

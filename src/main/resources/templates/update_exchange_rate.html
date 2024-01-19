@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>更新匯率記錄(實作匯率資料表更新 API)</title>
+</head>
+<body>
+<h1>更新匯率記錄(實作匯率資料表更新 API)</h1>
+<form th:action="@{/exchange_rates/update}" th:object="${exchangeRate}" method="post">
+    <input type="hidden" th:field="*{date}">
+    <label for="usdToNtd">USD to NTD:</label>
+    <input type="text" id="usdToNtd" name="usdToNtd" th:field="*{usdToNtd}" required><br>
+    <label for="rmbToNtd">RMB to NTD:</label>
+    <input type="text" id="rmbToNtd" name="rmbToNtd" th:field="*{rmbToNtd}" required><br>
+    <label for="usdToRmb">USD to RMB:</label>
+    <input type="text" id="usdToRmb" name="usdToRmb" th:field="*{usdToRmb}" required><br>
+    <button type="submit">提交</button>
+</form>
+</body>
+</html>
